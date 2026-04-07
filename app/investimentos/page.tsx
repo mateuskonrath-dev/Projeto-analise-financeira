@@ -51,11 +51,11 @@ export default function InvestimentosPage() {
               <h3 className="font-semibold text-gray-900 mb-4">Proposta Faseada</h3>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">Fase 1 (2025):</span>
+                  <span className="text-gray-700">Fase 1 (2026):</span>
                   <span className="font-semibold text-brand-600">R$ 30M</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">Fase 2 (2026):</span>
+                  <span className="text-gray-700">Fase 2 (2027):</span>
                   <span className="font-semibold text-brand-600">R$ 20M</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-brand-50 rounded-lg border border-brand-200">
