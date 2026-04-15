@@ -40,8 +40,8 @@ export default function PropostaInvestimentoPage() {
                 <tr className="border-t border-gray-200 bg-gray-50">
                   <td className="py-3 px-4 text-gray-700">Instalação e Calibração</td>
                   <td className="text-center py-3 px-4 text-gray-700">1</td>
-                  <td className="text-right py-3 px-4 text-gray-700">R$ 100 mil</td>
-                  <td className="text-right py-3 px-4 font-semibold text-gray-900">R$ 100 mil</td>
+                  <td className="text-right py-3 px-4 text-gray-700">R$ 200 mil</td>
+                  <td className="text-right py-3 px-4 font-semibold text-gray-900">R$ 200 mil</td>
                 </tr>
                 <tr className="border-t border-gray-200">
                   <td className="py-3 px-4 text-gray-700">Integração ERP e Sistemas</td>
