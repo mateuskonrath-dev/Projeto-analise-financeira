@@ -16,7 +16,6 @@ export default function InvestimentosPage() {
   })
 
   const [resultado, setResultado] = useState<InvestimentoResultado | null>(null)
-  const [mostraPropostaGrendene, setMostraPropostaGrendene] = useState(true)
 
   const handleInputChange = (field: keyof InvestimentoInput, value: number) => {
     setInput(prev => ({
@@ -32,104 +31,6 @@ export default function InvestimentosPage() {
 
   return (
     <MainLayout title="Análise de Investimentos">
-      {/* Seção Proposta Grendene */}
-      {mostraPropostaGrendene && (
-        <div className="mb-8 bg-gradient-to-r from-brand-50 to-blue-50 rounded-xl shadow-sm p-6 border border-brand-200">
-          <div className="flex justify-between items-start mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Proposta de Investimento - Grendene</h2>
-            <button
-              onClick={() => setMostraPropostaGrendene(false)}
-              className="text-gray-400 hover:text-gray-600 text-2xl"
-            >
-              ×
-            </button>
-          </div>
-
-          <div className="mb-6 p-4 bg-white rounded-lg border-l-4 border-brand-600">
-            <h3 className="font-semibold text-brand-900 mb-2">Controle de Qualidade Automatizado</h3>
-            <p className="text-sm text-gray-700">Implantação de 6 máquinas de inspeção com visão computacional para redução de defeitos, retrabalho e devoluções</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Resumo da Proposta */}
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Investimento Inicial</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">6 Máquinas de Inspeção:</span>
-                  <span className="font-semibold text-brand-600">R$ 3,6M</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">Instalação & Integração:</span>
-                  <span className="font-semibold text-brand-600">R$ 0,4M</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-brand-50 rounded-lg border border-brand-200">
-                  <span className="font-semibold text-gray-900">Total:</span>
-                  <span className="font-bold text-brand-700 text-lg">R$ 4,0M</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Métricas da Proposta */}
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Indicadores de Viabilidade</h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">Payback Simples:</span>
-                  <span className="font-semibold text-green-600">1,10 anos</span>
-                </div>
-                <div className="flex justify-between p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">VPL (10%):</span>
-                  <span className="font-semibold text-green-600">R$ 16,86M</span>
-                </div>
-                <div className="flex justify-between p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">TIR:</span>
-                  <span className="font-semibold text-green-600">~78-80% a.a.</span>
-                </div>
-                <div className="flex justify-between p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">EVA Incremental:</span>
-                  <span className="font-semibold text-green-600">R$ 3,35M/ano</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Fluxo de Caixa Projetado */}
-          <div className="mt-6 pt-6 border-t border-brand-200">
-            <h3 className="font-semibold text-gray-900 mb-4">Fluxo de Caixa Anual (5 anos)</h3>
-            <div className="grid grid-cols-5 gap-2 text-center text-sm">
-              <div className="p-3 bg-white rounded-lg">
-                <p className="text-gray-600 text-xs mb-1">Ano 1 (2026)</p>
-                <p className="font-semibold text-gray-900">R$ 3,5M</p>
-              </div>
-              <div className="p-3 bg-white rounded-lg">
-                <p className="text-gray-600 text-xs mb-1">Ano 2 (2027)</p>
-                <p className="font-semibold text-gray-900">R$ 5,0M</p>
-              </div>
-              <div className="p-3 bg-white rounded-lg">
-                <p className="text-gray-600 text-xs mb-1">Ano 3 (2028)</p>
-                <p className="font-semibold text-gray-900">R$ 6,0M</p>
-              </div>
-              <div className="p-3 bg-white rounded-lg">
-                <p className="text-gray-600 text-xs mb-1">Ano 4 (2029)</p>
-                <p className="font-semibold text-gray-900">R$ 6,5M</p>
-              </div>
-              <div className="p-3 bg-white rounded-lg">
-                <p className="text-gray-600 text-xs mb-1">Ano 5 (2030)</p>
-                <p className="font-semibold text-gray-900">R$ 7,4M</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 p-4 bg-white rounded-lg border border-green-200 flex items-start gap-3">
-            <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={20} />
-            <p className="text-sm text-gray-700">
-              <strong>Conclusão:</strong> Investimento de R$4M em controle de qualidade é viável e altamente atrativo, com TIR excepcional de 78-80% a.a., VPL positivo de R$16,86M, payback de apenas 1,1 anos e EVA incremental de R$3,35M/ano.
-            </p>
-          </div>
-        </div>
-      )}
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Formulário */}
         <div className="lg:col-span-1">
