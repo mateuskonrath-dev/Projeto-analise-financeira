@@ -16,6 +16,7 @@ const navItems = [
   { label: 'Indicadores', href: '/indicadores', icon: BarChart2 },
   { label: 'Simulação', href: '/simulacao', icon: FlaskConical },
   { label: 'Investimentos', href: '/investimentos', icon: TrendingUp },
+  { label: 'Proposta de Investimento', href: '/proposta-investimento', icon: FileText },
   { label: 'Relatórios', href: '/relatorios', icon: FileText },
   { label: 'Sobre', href: '/sobre', icon: Info },
 ]
