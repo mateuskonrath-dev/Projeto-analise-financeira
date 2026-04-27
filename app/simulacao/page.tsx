@@ -107,13 +107,32 @@ export default function SimulacaoPage() {
                 />
               </div>
 
-              <button
-                onClick={handleSimular}
-                className="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <TrendingUp size={20} />
-                Simular
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={handleSimular}
+                  className="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <TrendingUp size={20} />
+                  Simular
+                </button>
+                <button
+                  onClick={() => {
+                    const cenarioQA = {
+                      aumentoReceita: 0,
+                      aumentoCustos: 0,
+                      reducaoDespesas: 15,
+                      novoInvestimento: 4,
+                    }
+                    setInput(cenarioQA)
+                    const result = calcularSimulacao(latestData, cenarioQA)
+                    setResultado(result)
+                  }}
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors"
+                  title="Cenário: Controle de Qualidade Automatizado (R$ 4M)"
+                >
+                  QA 🤖
+                </button>
+              </div>
             </div>
 
             {/* Dados Atuais */}
@@ -133,6 +152,17 @@ export default function SimulacaoPage() {
                   <span className="font-semibold text-green-600">{formatarMoeda(latestData.lucro)}</span>
                 </p>
               </div>
+            </div>
+
+            {/* Cenário QA */}
+            <div className="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-600">
+              <h4 className="font-semibold text-green-900 mb-2">🤖 Cenário: Controle de Qualidade</h4>
+              <p className="text-xs text-green-700 leading-relaxed">
+                Investimento de <strong>R$ 4 Milhões</strong> em 6 máquinas automatizadas com visão computacional. Benefícios esperados: <strong>R$ 5,4M - R$ 7,3M/ano</strong> em redução de defeitos, retrabalho e devoluções.
+              </p>
+              <p className="text-xs text-green-600 mt-2">
+                <strong>Payback:</strong> 8-10 meses | <strong>ROI:</strong> 135-182% ao ano
+              </p>
             </div>
           </div>
         </div>
