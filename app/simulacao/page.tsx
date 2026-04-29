@@ -11,18 +11,18 @@ import { TrendingUp, ArrowRight } from 'lucide-react'
 
 export default function SimulacaoPage() {
   const [input, setInput] = useState<SimulacaoInput>({
-    aumentoReceita: 5,
-    aumentoCustos: 2,
-    reducaoDespesas: 0,
-    novoInvestimento: 50,
+    aumentoReceita: 0,
+    aumentoCustos: -2,
+    reducaoDespesas: 15,
+    novoInvestimento: 4,
   })
 
   const [resultado, setResultado] = useState<SimulacaoResultado | null>(() =>
     calcularSimulacao(latestData, {
-      aumentoReceita: 5,
-      aumentoCustos: 2,
-      reducaoDespesas: 0,
-      novoInvestimento: 50,
+      aumentoReceita: 0,
+      aumentoCustos: -2,
+      reducaoDespesas: 15,
+      novoInvestimento: 4,
     })
   )
 
